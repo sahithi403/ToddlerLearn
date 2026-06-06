@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Toddler Learn</string>
+    <string name="title_animals">Animals</string>
+    <string name="title_colors">Colors</string>
+    <string name="title_shapes">Shapes</string>
+    <string name="tap_to_learn">Tap anything to learn!</string>
+</resources>

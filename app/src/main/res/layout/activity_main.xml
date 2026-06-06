@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_main">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_header"
+        android:gravity="center"
+        android:paddingTop="32dp"
+        android:paddingBottom="20dp"
+        android:paddingHorizontal="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌟 Let's Learn!"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tap_to_learn"
+            android:textSize="18sp"
+            android:textColor="#FFE1BEE7"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+    <!-- Category Buttons -->
+    <LinearLayout
+        android:id="@+id/layoutCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="16dp"
+        android:layout_marginBottom="4dp">
+
+        <Button
+            android:id="@+id/btnAnimals"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="4dp"
+            android:text="🐾 Animals"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/cat_animals"
+            android:textColor="@color/white"
+            android:cornerRadius="16dp" />
+
+        <Button
+            android:id="@+id/btnColors"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="4dp"
+            android:text="🎨 Colors"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/cat_colors"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnShapes"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="4dp"
+            android:text="🔷 Shapes"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/cat_shapes"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <!-- Grid of items -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="8dp"
+        android:paddingBottom="8dp"
+        android:clipToPadding="false" />
+
+</LinearLayout>

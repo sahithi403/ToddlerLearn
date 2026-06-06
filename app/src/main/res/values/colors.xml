@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App theme colors -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Background -->
+    <color name="bg_main">#FFF9F0FF</color>
+    <color name="bg_header">#FFAB47BC</color>
+
+    <!-- Category button colors -->
+    <color name="cat_animals">#FFFF8A65</color>
+    <color name="cat_colors">#FF66BB6A</color>
+    <color name="cat_shapes">#FF42A5F5</color>
+
+    <!-- Card colors for items -->
+    <color name="card_1">#FFFFF176</color>
+    <color name="card_2">#FFAED581</color>
+    <color name="card_3">#FF80DEEA</color>
+    <color name="card_4">#FFFFAB91</color>
+    <color name="card_5">#FFCE93D8</color>
+    <color name="card_6">#FF80CBC4</color>
+    <color name="card_7">#FFFFD54F</color>
+    <color name="card_8">#FF90CAF9</color>
+    <color name="card_9">#FFF48FB1</color>
+</resources>
