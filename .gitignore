@@ -16,6 +16,9 @@ local.properties
 app/build/
 app/release/
 
+# Local Claude context
+.claude/local.md
+
 # OS files
 .DS_Store
 Thumbs.db

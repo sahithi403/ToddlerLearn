@@ -57,8 +57,7 @@
             android:textSize="14sp"
             android:textStyle="bold"
             android:backgroundTint="@color/cat_animals"
-            android:textColor="@color/white"
-            android:cornerRadius="16dp" />
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btnColors"
