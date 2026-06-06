@@ -44,9 +44,15 @@ A tap-and-learn Android app for toddlers. Kids tap colorful cards to hear animal
 | Nav: ఆకారాలు | `#5E4A6B` |
 
 ### Emoji Rendering
-- Rendered to bitmap: 240x240px, text size 160sp
-- Saturation boost: `1.4x` via `ColorMatrix.setSaturation()`
-- White glow shadow: `shadowColor=#FFFFFF`, `shadowRadius=12`
+- Pre-rendered at dev time using `scripts/render_emojis.py` → saved as WebP to `app/src/main/res/drawable/`
+- Run script whenever new emojis are added: `python3 scripts/render_emojis.py`
+- Script skips files that already exist — delete them first to force re-render
+- Canvas: 240x240px, font size 160sp, Apple Color Emoji font
+- **Saturation: `0.7`** — slightly desaturated for a soft, muted feel (do NOT boost above 1.0, emojis become cartoonish)
+- Output format: WebP, quality 90
+- Naming convention: `emoji_{category}_{name}.webp` e.g. `emoji_animals_dog.webp`
+- Each `LearnItem` holds a `drawableResId: Int` pointing to the pre-rendered file
+- Adapter loads via `ivEmoji.setImageResource(item.drawableResId)` — no runtime rendering
 
 ## Branches
 - `main` — stable
