@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="6dp"
     app:cardCornerRadius="20dp"
-    app:cardElevation="4dp">
+    app:cardElevation="2dp">
 
     <LinearLayout
         android:id="@+id/cardLayout"
@@ -17,24 +17,23 @@
         android:paddingVertical="20dp"
         android:paddingHorizontal="8dp">
 
-        <TextView
-            android:id="@+id/tvEmoji"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="🐶"
-            android:textSize="52sp"
-            android:gravity="center" />
+        <ImageView
+            android:id="@+id/ivEmoji"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:scaleType="fitCenter" />
+
 
         <TextView
             android:id="@+id/tvLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Dog"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#333333"
+            android:textColor="@color/card_text"
             android:gravity="center"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="10dp" />
 
     </LinearLayout>
 

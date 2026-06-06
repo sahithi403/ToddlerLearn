@@ -31,59 +31,82 @@
             android:layout_height="wrap_content"
             android:text="@string/tap_to_learn"
             android:textSize="18sp"
-            android:textColor="#FFE1BEE7"
+            android:textColor="#FFAAC8C4"
             android:layout_marginTop="4dp"/>
 
     </LinearLayout>
 
-    <!-- Category Buttons -->
-    <LinearLayout
-        android:id="@+id/layoutCategories"
+    <!-- Category Buttons - Horizontal Scrollable -->
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:paddingHorizontal="12dp"
-        android:paddingVertical="16dp"
-        android:layout_marginBottom="4dp">
+        android:scrollbars="none"
+        android:paddingVertical="12dp">
 
-        <Button
-            android:id="@+id/btnAnimals"
-            android:layout_width="0dp"
-            android:layout_height="56dp"
-            android:layout_weight="1"
-            android:layout_marginHorizontal="4dp"
-            android:text="🐾 Animals"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:backgroundTint="@color/cat_animals"
-            android:textColor="@color/white" />
+        <LinearLayout
+            android:id="@+id/layoutCategories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp">
 
-        <Button
-            android:id="@+id/btnColors"
-            android:layout_width="0dp"
-            android:layout_height="56dp"
-            android:layout_weight="1"
-            android:layout_marginHorizontal="4dp"
-            android:text="🎨 Colors"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:backgroundTint="@color/cat_colors"
-            android:textColor="@color/white" />
+            <Button
+                android:id="@+id/btnPeople"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="4dp"
+                android:text="👨‍👩‍👧 మనుషులు"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/cat_people"
+                android:textColor="@color/white" />
 
-        <Button
-            android:id="@+id/btnShapes"
-            android:layout_width="0dp"
-            android:layout_height="56dp"
-            android:layout_weight="1"
-            android:layout_marginHorizontal="4dp"
-            android:text="🔷 Shapes"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:backgroundTint="@color/cat_shapes"
-            android:textColor="@color/white" />
+            <Button
+                android:id="@+id/btnObjects"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="4dp"
+                android:text="🧸 వస్తువులు"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/cat_objects"
+                android:textColor="@color/white" />
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/btnAnimals"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="4dp"
+                android:text="🐾 జంతువులు"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/cat_animals"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnColors"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="4dp"
+                android:text="🎨 రంగులు"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/cat_colors"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnShapes"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="4dp"
+                android:text="🔷 ఆకారాలు"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/cat_shapes"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
 
     <!-- Grid of items -->
     <androidx.recyclerview.widget.RecyclerView

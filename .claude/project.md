@@ -19,6 +19,35 @@ A tap-and-learn Android app for toddlers. Kids tap colorful cards to hear animal
 - App icon uses `@android:drawable/sym_def_app_icon` (no custom mipmap icons yet)
 - `local.properties` and `.gradle/`, `.idea/` are gitignored
 
+## Visual Design
+
+### Colors
+| Element | Color |
+|---|---|
+| App background | `#F2EDE6` |
+| Header | `#3D5A5E` |
+| Accent | `#D95F2B` |
+| Card text | `#1A1A1A` |
+| Card 1 — sage green | `#D6E4D0` |
+| Card 2 — dusty teal | `#D8E4E2` |
+| Card 3 — warm sand | `#E4D8CC` |
+| Card 4 — dusty blue | `#D0DAE4` |
+| Card 5 — blush | `#E0D4CC` |
+| Card 6 — seafoam | `#CCD8D2` |
+| Card 7 — linen | `#E0D8C8` |
+| Card 8 — lavender | `#D4D0E0` |
+| Card 9 — mint | `#CCD8D0` |
+| Nav: మనుషులు | `#6B4E3D` |
+| Nav: వస్తువులు | `#4A6741` |
+| Nav: జంతువులు | `#7A5C3A` |
+| Nav: రంగులు | `#3A5F72` |
+| Nav: ఆకారాలు | `#5E4A6B` |
+
+### Emoji Rendering
+- Rendered to bitmap: 240x240px, text size 160sp
+- Saturation boost: `1.4x` via `ColorMatrix.setSaturation()`
+- White glow shadow: `shadowColor=#FFFFFF`, `shadowRadius=12`
+
 ## Branches
 - `main` — stable
 - `helloWorld` — development branch

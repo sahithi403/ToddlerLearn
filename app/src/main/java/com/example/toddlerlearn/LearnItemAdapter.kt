@@ -5,6 +5,7 @@ import android.animation.ObjectAnimator
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -15,7 +16,7 @@ class LearnItemAdapter(
 ) : RecyclerView.Adapter<LearnItemAdapter.ViewHolder>() {
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val tvEmoji: TextView = view.findViewById(R.id.tvEmoji)
+        val ivEmoji: ImageView = view.findViewById(R.id.ivEmoji)
         val tvLabel: TextView = view.findViewById(R.id.tvLabel)
         val cardLayout: LinearLayout = view.findViewById(R.id.cardLayout)
     }
@@ -28,12 +29,14 @@ class LearnItemAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
-        holder.tvEmoji.text = item.emoji
         holder.tvLabel.text = item.label
         holder.cardLayout.setBackgroundColor(item.cardColor)
 
+        if (item.drawableResId != 0) {
+            holder.ivEmoji.setImageResource(item.drawableResId)
+        }
+
         holder.itemView.setOnClickListener {
-            // Bounce animation on tap
             bounceAnimate(holder.itemView)
             onItemClicked(item)
         }

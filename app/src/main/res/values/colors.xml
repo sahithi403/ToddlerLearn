@@ -1,31 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- App theme colors -->
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
+    <!-- Base -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!-- Background -->
-    <color name="bg_main">#FFF9F0FF</color>
-    <color name="bg_header">#FFAB47BC</color>
+    <!-- App background — warm parchment -->
+    <color name="bg_main">#FFF2EDE6</color>
 
-    <!-- Category button colors -->
-    <color name="cat_animals">#FFFF8A65</color>
-    <color name="cat_colors">#FF66BB6A</color>
-    <color name="cat_shapes">#FF42A5F5</color>
+    <!-- Header — deep slate-teal, like a still pond at dusk -->
+    <color name="bg_header">#FF3D5A5E</color>
 
-    <!-- Card colors for items -->
-    <color name="card_1">#FFFFF176</color>
-    <color name="card_2">#FFAED581</color>
-    <color name="card_3">#FF80DEEA</color>
-    <color name="card_4">#FFFFAB91</color>
-    <color name="card_5">#FFCE93D8</color>
-    <color name="card_6">#FF80CBC4</color>
-    <color name="card_7">#FFFFD54F</color>
-    <color name="card_8">#FF90CAF9</color>
-    <color name="card_9">#FFF48FB1</color>
+    <!-- Category nav buttons — muted earth tones -->
+    <color name="cat_people">#FF6B4E3D</color>   <!-- warm dark umber -->
+    <color name="cat_objects">#FF4A6741</color>  <!-- forest green -->
+    <color name="cat_animals">#FF7A5C3A</color>  <!-- dusty tan -->
+    <color name="cat_colors">#FF3A5F72</color>   <!-- steel blue -->
+    <color name="cat_shapes">#FF5E4A6B</color>   <!-- dusty plum -->
+
+    <!-- Card backgrounds — warm muted tones, sticker handles contrast -->
+    <color name="card_1">#FFD6E4D0</color>  <!-- sage green -->
+    <color name="card_2">#FFD8E4E2</color>  <!-- dusty teal -->
+    <color name="card_3">#FFE4D8CC</color>  <!-- warm sand -->
+    <color name="card_4">#FFD0DAE4</color>  <!-- dusty blue -->
+    <color name="card_5">#FFE0D4CC</color>  <!-- blush -->
+    <color name="card_6">#FFCCD8D2</color>  <!-- seafoam -->
+    <color name="card_7">#FFE0D8C8</color>  <!-- linen -->
+    <color name="card_8">#FFD4D0E0</color>  <!-- lavender -->
+    <color name="card_9">#FFCCD8D0</color>  <!-- mint -->
+
+    <!-- Text on cards — near-black for contrast on parchment -->
+    <color name="card_text">#FF1A1A1A</color>
+
+    <!-- Accent — vivid burnt orange, used sparingly -->
+    <color name="accent_vivid">#FFD95F2B</color>
+
+    <!-- Legacy refs kept for theme -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF3D5A5E</color>
+    <color name="purple_700">#FF2B3F42</color>
+    <color name="teal_200">#FF7AA8A1</color>
+    <color name="teal_700">#FF4A7870</color>
 </resources>

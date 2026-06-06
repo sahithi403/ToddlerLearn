@@ -26,25 +26,79 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     // ── Data ─────────────────────────────────────────────────────────────────
 
+    private val people = listOf(
+        Triple("👶", "పిల్లవాడు", R.drawable.emoji_people_baby),
+        Triple("👧", "అమ్మాయి",   R.drawable.emoji_people_girl),
+        Triple("👦", "అబ్బాయి",   R.drawable.emoji_people_boy),
+        Triple("👩", "అమ్మ",      R.drawable.emoji_people_mother),
+        Triple("👨", "నాన్న",     R.drawable.emoji_people_father),
+        Triple("👵", "నాయనమ్మ",  R.drawable.emoji_people_grandmother),
+        Triple("👴", "తాతయ్య",   R.drawable.emoji_people_grandfather),
+        Triple("👩‍⚕️", "డాక్టర్", R.drawable.emoji_people_doctor),
+        Triple("👨‍🏫", "టీచర్",   R.drawable.emoji_people_teacher),
+        Triple("👩‍🍳", "వంటవాడు", R.drawable.emoji_people_cook),
+        Triple("👮", "పోలీసు",   R.drawable.emoji_people_police),
+        Triple("👩‍🌾", "రైతు",    R.drawable.emoji_people_farmer),
+    )
+
+    private val objects = listOf(
+        Triple("🏠", "ఇల్లు",     R.drawable.emoji_objects_house),
+        Triple("🚗", "కారు",      R.drawable.emoji_objects_car),
+        Triple("📚", "పుస్తకం",   R.drawable.emoji_objects_book),
+        Triple("✏️", "పెన్సిల్", R.drawable.emoji_objects_pencil),
+        Triple("🎒", "బ్యాగు",   R.drawable.emoji_objects_bag),
+        Triple("⚽", "బంతి",      R.drawable.emoji_objects_ball),
+        Triple("🍎", "ఆపిల్",    R.drawable.emoji_objects_apple),
+        Triple("🌸", "పువ్వు",   R.drawable.emoji_objects_flower),
+        Triple("☀️", "సూర్యుడు", R.drawable.emoji_objects_sun),
+        Triple("🌙", "చంద్రుడు", R.drawable.emoji_objects_moon),
+        Triple("⭐", "నక్షత్రం", R.drawable.emoji_objects_star),
+        Triple("🌧️", "వర్షం",   R.drawable.emoji_objects_rain),
+    )
+
     private val animals = listOf(
-        "🐶" to "Dog",   "🐱" to "Cat",    "🐮" to "Cow",
-        "🐷" to "Pig",   "🐸" to "Frog",   "🦁" to "Lion",
-        "🐘" to "Elephant", "🐧" to "Penguin", "🦊" to "Fox",
-        "🐰" to "Rabbit", "🐻" to "Bear",  "🦋" to "Butterfly"
+        Triple("🐶", "కుక్క",          R.drawable.emoji_animals_dog),
+        Triple("🐱", "పిల్లి",         R.drawable.emoji_animals_cat),
+        Triple("🐮", "ఆవు",            R.drawable.emoji_animals_cow),
+        Triple("🐷", "పంది",           R.drawable.emoji_animals_pig),
+        Triple("🐸", "కప్ప",           R.drawable.emoji_animals_frog),
+        Triple("🦁", "సింహం",          R.drawable.emoji_animals_lion),
+        Triple("🐘", "ఏనుగు",          R.drawable.emoji_animals_elephant),
+        Triple("🐧", "పెంగ్విన్",      R.drawable.emoji_animals_penguin),
+        Triple("🦊", "నక్క",           R.drawable.emoji_animals_fox),
+        Triple("🐰", "కుందేలు",        R.drawable.emoji_animals_rabbit),
+        Triple("🐻", "భల్లూకం",        R.drawable.emoji_animals_bear),
+        Triple("🦋", "సీతాకోకచిలుక",  R.drawable.emoji_animals_butterfly),
     )
 
     private val colors = listOf(
-        "🔴" to "Red",   "🟠" to "Orange", "🟡" to "Yellow",
-        "🟢" to "Green", "🔵" to "Blue",   "🟣" to "Purple",
-        "⚫" to "Black", "⚪" to "White",   "🟤" to "Brown",
-        "🩷" to "Pink",  "🩵" to "Light Blue", "🟩" to "Dark Green"
+        Triple("🔴", "ఎరుపు",      R.drawable.emoji_colors_red),
+        Triple("🟠", "నారింజ",     R.drawable.emoji_colors_orange),
+        Triple("🟡", "పసుపు",      R.drawable.emoji_colors_yellow),
+        Triple("🟢", "ఆకుపచ్చ",   R.drawable.emoji_colors_green),
+        Triple("🔵", "నీలం",       R.drawable.emoji_colors_blue),
+        Triple("🟣", "ఊదా",        R.drawable.emoji_colors_purple),
+        Triple("⚫", "నలుపు",      R.drawable.emoji_colors_black),
+        Triple("⚪", "తెలుపు",     R.drawable.emoji_colors_white),
+        Triple("🟤", "గోధుమ",      R.drawable.emoji_colors_brown),
+        Triple("🩷", "గులాబీ",     R.drawable.emoji_colors_pink),
+        Triple("🩵", "లేత నీలం",  R.drawable.emoji_colors_light_blue),
+        Triple("🟩", "చీకటి పచ్చ", R.drawable.emoji_colors_dark_green),
     )
 
     private val shapes = listOf(
-        "⭕" to "Circle",   "🔷" to "Diamond",  "🔺" to "Triangle",
-        "⬛" to "Square",   "🔶" to "Hexagon",  "⭐" to "Star",
-        "❤️" to "Heart",   "🔘" to "Oval",     "📐" to "Rectangle",
-        "🌙" to "Crescent", "💠" to "Crystal",  "🔣" to "Cross"
+        Triple("⭕", "వృత్తం",         R.drawable.emoji_shapes_circle),
+        Triple("🔷", "వజ్రం",          R.drawable.emoji_shapes_diamond),
+        Triple("🔺", "త్రిభుజం",       R.drawable.emoji_shapes_triangle),
+        Triple("⬛", "చతురస్రం",       R.drawable.emoji_shapes_square),
+        Triple("🔶", "షట్భుజి",        R.drawable.emoji_shapes_hexagon),
+        Triple("⭐", "నక్షత్రం",       R.drawable.emoji_shapes_star),
+        Triple("❤️", "గుండె",         R.drawable.emoji_shapes_heart),
+        Triple("🔘", "అండాకారం",      R.drawable.emoji_shapes_oval),
+        Triple("📐", "దీర్ఘచతురస్రం", R.drawable.emoji_shapes_rectangle),
+        Triple("🌙", "చంద్రవంక",      R.drawable.emoji_shapes_crescent),
+        Triple("💠", "స్ఫటికం",        R.drawable.emoji_shapes_crystal),
+        Triple("🔣", "సిలువ",          R.drawable.emoji_shapes_cross),
     )
 
     // ─────────────────────────────────────────────────────────────────────────
@@ -56,17 +110,19 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
         tts = TextToSpeech(this, this)
 
-        // Default to Animals
-        loadCategory(animals)
+        // Default to People
+        loadCategory(people)
 
-        binding.btnAnimals.setOnClickListener { loadCategory(animals) }
-        binding.btnColors.setOnClickListener  { loadCategory(colors)  }
-        binding.btnShapes.setOnClickListener  { loadCategory(shapes)  }
+        binding.btnPeople.setOnClickListener  { loadCategory(people)   }
+        binding.btnObjects.setOnClickListener { loadCategory(objects)  }
+        binding.btnAnimals.setOnClickListener { loadCategory(animals)  }
+        binding.btnColors.setOnClickListener  { loadCategory(colors)   }
+        binding.btnShapes.setOnClickListener  { loadCategory(shapes)   }
     }
 
-    private fun loadCategory(data: List<Pair<String, String>>) {
-        val items = data.mapIndexed { index, (emoji, label) ->
-            LearnItem(emoji, label, cardColors[index % cardColors.size])
+    private fun loadCategory(data: List<Triple<String, String, Int>>) {
+        val items = data.mapIndexed { index, (emoji, label, resId) ->
+            LearnItem(emoji, label, cardColors[index % cardColors.size], resId)
         }
 
         val adapter = LearnItemAdapter(items) { item ->
@@ -87,8 +143,9 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS) {
-            tts.language = Locale.US
-            ttsReady = true
+            val telugu = Locale("te", "IN")
+            val result = tts.setLanguage(telugu)
+            ttsReady = result != TextToSpeech.LANG_MISSING_DATA && result != TextToSpeech.LANG_NOT_SUPPORTED
         }
     }
 
