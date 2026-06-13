@@ -54,6 +54,38 @@ A tap-and-learn Android app for toddlers. Kids tap colorful cards to hear animal
 - Each `LearnItem` holds a `drawableResId: Int` pointing to the pre-rendered file
 - Adapter loads via `ivEmoji.setImageResource(item.drawableResId)` — no runtime rendering
 
+## Image Assets — Usage Rules
+- Images in `scripts/samples/realLifeSamples/` are **reference-only**. They must never be uploaded to any external service, API, or image generation platform.
+- Only text descriptions derived from these images may be used externally (e.g. style prompts, color specs).
+
+## Image Generation Styles
+
+### MathruStyle
+> 2D cel-shaded children's illustration.
+>
+> **Background:** Natural, scene-appropriate colors — whatever environment is depicted should use realistic, true-to-life colors (e.g. greens for nature, blues for water, warm tones for indoor scenes). Avoid desaturating or shifting the environment toward a golden/sandy palette. Ground and surface textures in muted, naturalistic tones. Rocks in cool gray (#9AA5A8).
+>
+> **Texture:** Paper grain and sand noise overlaid at low opacity across all surfaces. No smooth gradients, no clean digital edges.
+>
+> **Characters:** Naturally proportioned with realistic anatomy. Large expressive eyes with colored iris. Two-tone body coloring: a primary body color with a darker or lighter secondary tone for inner ears, around the eyes, flanks, and base. One saturated accent color for accessories or markings. Dark outlines and markings in deep navy (#1E2A3A), not pure black.
+>
+> **Rendering:** No outlines or thin strokes — shapes defined by color contrast only. Matte finish, no gloss or specular highlights.
+>
+> **Composition:** Static, calm, low visual complexity.
+>
+> Reference samples: `scripts/samples/realLifeSamples/`
+
+
+## Characters
+
+### Bunty (rabbit)
+- **Reference image:** `scripts/samples/bunty.png`
+- **Body:** White (#F0EDE0) main body and chest, soft mid-gray (#A8A8A8) at inner ears, around the eyes, flanks, and base
+- **Accent:** Orange-red (#E05A1A) scarf around the neck
+- **Markings:** Deep navy (#1E2A3A) for eyes and nose
+- **Style:** MathruStyle
+- **Note:** Do not alter facial features, ear shape, body proportions, or the two-tone color placement when editing or re-generating Bunty. Only background and scene context should change between images.
+
 ## Branches
 - `main` — stable
 - `helloWorld` — development branch

@@ -22,3 +22,6 @@ app/release/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Sample reference images
+scripts/samples/realLifeSamples/

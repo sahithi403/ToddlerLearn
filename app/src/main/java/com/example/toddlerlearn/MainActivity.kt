@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         Triple("🐘", "ఏనుగు",          R.drawable.emoji_animals_elephant),
         Triple("🐧", "పెంగ్విన్",      R.drawable.emoji_animals_penguin),
         Triple("🦊", "నక్క",           R.drawable.emoji_animals_fox),
-        Triple("🐰", "కుందేలు",        R.drawable.emoji_animals_rabbit),
+        Triple("🐰", "కుందేలు",        R.drawable.emoji_animals_bunty),
         Triple("🐻", "భల్లూకం",        R.drawable.emoji_animals_bear),
         Triple("🦋", "సీతాకోకచిలుక",  R.drawable.emoji_animals_butterfly),
     )
