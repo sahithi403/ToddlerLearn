@@ -1,0 +1,64 @@
+<svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Body -->
+  <ellipse cx="120" cy="160" rx="52" ry="58" fill="#E8E4DC"/>
+
+  <!-- Left ear (back) -->
+  <ellipse cx="95" cy="72" rx="14" ry="36" fill="#D0CBC0" transform="rotate(-8 95 72)"/>
+  <ellipse cx="95" cy="74" rx="7" ry="27" fill="#C8A8A8" transform="rotate(-8 95 74)"/>
+
+  <!-- Right ear (front) -->
+  <ellipse cx="130" cy="68" rx="14" ry="36" fill="#E8E4DC" transform="rotate(6 130 68)"/>
+  <ellipse cx="130" cy="70" rx="7" ry="27" fill="#C8A8A8" transform="rotate(6 130 70)"/>
+
+  <!-- Head -->
+  <circle cx="118" cy="118" r="46" fill="#E8E4DC"/>
+
+  <!-- Gray shading on sides of body -->
+  <ellipse cx="76" cy="165" rx="20" ry="38" fill="#C8C4BC" opacity="0.5"/>
+  <ellipse cx="164" cy="165" rx="20" ry="38" fill="#C8C4BC" opacity="0.5"/>
+
+  <!-- Belly (lighter center) -->
+  <ellipse cx="120" cy="168" rx="30" ry="38" fill="#F5F2EC"/>
+
+  <!-- Face shading -->
+  <ellipse cx="108" cy="122" rx="18" ry="16" fill="#D0CBC0" opacity="0.35"/>
+
+  <!-- Left eye -->
+  <circle cx="104" cy="110" r="9" fill="white"/>
+  <circle cx="106" cy="110" r="6" fill="#4A8A8C"/>
+  <circle cx="106" cy="110" r="4" fill="#1A1A2E"/>
+  <circle cx="108" cy="108" r="1.5" fill="white"/>
+
+  <!-- Right eye -->
+  <circle cx="132" cy="109" r="9" fill="white"/>
+  <circle cx="133" cy="109" r="6" fill="#4A8A8C"/>
+  <circle cx="133" cy="109" r="4" fill="#1A1A2E"/>
+  <circle cx="135" cy="107" r="1.5" fill="white"/>
+
+  <!-- Nose -->
+  <ellipse cx="119" cy="124" rx="5" ry="3.5" fill="#C8787A"/>
+
+  <!-- Mouth -->
+  <path d="M114 128 Q119 133 124 128" stroke="#1A1A2E" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Cheek blush -->
+  <circle cx="96" cy="122" r="9" fill="#E8A0A0" opacity="0.3"/>
+  <circle cx="142" cy="121" r="9" fill="#E8A0A0" opacity="0.3"/>
+
+  <!-- Scarf -->
+  <rect x="82" y="148" width="76" height="18" rx="9" fill="#D04820"/>
+  <rect x="82" y="148" width="76" height="10" rx="5" fill="#E05A1A"/>
+  <!-- Scarf stripes -->
+  <line x1="98" y1="148" x2="98" y2="166" stroke="#C03818" stroke-width="1.5" opacity="0.5"/>
+  <line x1="114" y1="148" x2="114" y2="166" stroke="#C03818" stroke-width="1.5" opacity="0.5"/>
+  <line x1="130" y1="148" x2="130" y2="166" stroke="#C03818" stroke-width="1.5" opacity="0.5"/>
+  <line x1="146" y1="148" x2="146" y2="166" stroke="#C03818" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Tiny paws at bottom -->
+  <ellipse cx="98" cy="212" rx="22" ry="10" fill="#D0CBC0"/>
+  <ellipse cx="142" cy="212" rx="22" ry="10" fill="#D0CBC0"/>
+  <ellipse cx="98" cy="210" rx="20" ry="9" fill="#E8E4DC"/>
+  <ellipse cx="142" cy="210" rx="20" ry="9" fill="#E8E4DC"/>
+
+</svg>

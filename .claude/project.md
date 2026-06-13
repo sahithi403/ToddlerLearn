@@ -89,3 +89,12 @@ A tap-and-learn Android app for toddlers. Kids tap colorful cards to hear animal
 ## Branches
 - `main` — stable
 - `helloWorld` — development branch
+## Card Layout
+- All cards use a **fixed height of 200dp** (`item_learn_card.xml`) — ensures every row is the same size
+- ImageView inside uses `match_parent` width and `weight=1` height — fills available card space
+- `scaleType="fitCenter"` — scales image to fit within the card, maintaining aspect ratio
+- No per-item dynamic sizing; `LearnItem` only needs `drawableResId`, no `imageSizeDp`
+
+## Special Assets
+- **Bunty** (`emoji_animals_bunty.webp`): background removed via `rembg[cpu]`, then tightly cropped to bounding box using Pillow. Original 240×240px → cropped to 80×141px (portrait). Tight crop ensures Bunty fills the card width at runtime.
+- Crop command: `from PIL import Image; img = Image.open(...).convert('RGBA'); img.crop(img.getbbox()).save(..., lossless=True)`
