@@ -64,7 +64,7 @@ class FlashCardsActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         Triple("Frog",      "కప్ప",          R.drawable.emoji_animals_frog),
         Triple("Lion",      "సింహం",         R.drawable.emoji_animals_lion),
         Triple("Elephant",  "ఏనుగు",         R.drawable.emoji_animals_elephant),
-        Triple("Penguin",   "పెంగ్విన్",     R.drawable.emoji_animals_penguin),
+        Triple("Tiger",     "పులి",           R.drawable.emoji_animals_tiger),
         Triple("Fox",       "నక్క",          R.drawable.emoji_animals_fox),
         Triple("Rabbit",    "కుందేలు",       R.drawable.emoji_animals_bunty),
         Triple("Bear",      "ఎలుగుబంటి",     R.drawable.emoji_animals_bear),

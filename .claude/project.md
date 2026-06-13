@@ -98,3 +98,23 @@ A tap-and-learn Android app for toddlers. Kids tap colorful cards to hear animal
 ## Special Assets
 - **Bunty** (`emoji_animals_bunty.webp`): background removed via `rembg[cpu]`, then tightly cropped to bounding box using Pillow. Original 240×240px → cropped to 80×141px (portrait). Tight crop ensures Bunty fills the card width at runtime.
 - Crop command: `from PIL import Image; img = Image.open(...).convert('RGBA'); img.crop(img.getbbox()).save(..., lossless=True)`
+
+## Image Generation Workflow
+
+### Generating characters for flash cards
+When the user says "generate a character with MathruStyle" (or similar):
+1. Always append to the prompt: `"isolated character on transparent background, no background, alpha channel transparency"`
+2. Generate 2 options (`count: 2`)
+3. After user picks one, run rembg to remove any remaining background:
+   ```bash
+   python3 -c "
+   from rembg import remove
+   from PIL import Image
+   img = Image.open('scripts/samples/<name>.png')
+   result = remove(img)
+   bbox = result.getbbox()
+   result.crop(bbox).save('app/src/main/res/drawable/emoji_animals_<name>.webp', 'WEBP', lossless=True)
+   print('Done!')
+   "
+   ```
+4. Update FlashCardsActivity.kt to reference the new drawable
