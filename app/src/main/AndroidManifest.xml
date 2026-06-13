@@ -28,7 +28,7 @@
 
         <!-- Flash Cards screen -->
         <activity
-            android:name=".MainActivity"
+            android:name=".FlashCardsActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
 

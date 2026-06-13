@@ -62,17 +62,6 @@
                 android:textColor="@color/white" />
 
             <Button
-                android:id="@+id/btnObjects"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginHorizontal="4dp"
-                android:text="🧸 వస్తువులు"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                android:backgroundTint="@color/cat_objects"
-                android:textColor="@color/white" />
-
-            <Button
                 android:id="@+id/btnAnimals"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
@@ -81,6 +70,17 @@
                 android:textSize="13sp"
                 android:textStyle="bold"
                 android:backgroundTint="@color/cat_animals"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnObjects"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="4dp"
+                android:text="🧸 వస్తువులు"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/cat_objects"
                 android:textColor="@color/white" />
 
             <Button

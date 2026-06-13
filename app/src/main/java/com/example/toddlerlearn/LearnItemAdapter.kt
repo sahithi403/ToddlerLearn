@@ -17,7 +17,7 @@ class LearnItemAdapter(
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val ivEmoji: ImageView = view.findViewById(R.id.ivEmoji)
         val tvLabel: TextView = view.findViewById(R.id.tvLabel)
-        val cardLayout: LinearLayout = view.findViewById(R.id.cardLayout)
+        val cardLayout: View = view.findViewById(R.id.cardLayout)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -28,7 +28,7 @@ class LearnItemAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
-        holder.tvLabel.text = item.label
+        holder.tvLabel.text = item.teluguLabel
         holder.cardLayout.setBackgroundColor(item.cardColor)
 
         if (item.drawableResId != 0) {

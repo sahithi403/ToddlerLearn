@@ -16,7 +16,7 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.cardFlashCards.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, FlashCardsActivity::class.java))
         }
 
         binding.cardLessonPlan.setOnClickListener {

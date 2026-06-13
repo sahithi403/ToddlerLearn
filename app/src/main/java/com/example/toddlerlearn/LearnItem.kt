@@ -1,8 +1,8 @@
 package com.example.toddlerlearn
 
 data class LearnItem(
-    val emoji: String,
-    val label: String,
+    val englishLabel: String,
+    val teluguLabel: String,
     val cardColor: Int,
     val drawableResId: Int = 0
 )

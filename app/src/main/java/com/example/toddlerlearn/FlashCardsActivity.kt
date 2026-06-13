@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.toddlerlearn.databinding.ActivityMainBinding
 import java.util.Locale
 
-class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
+class FlashCardsActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var tts: TextToSpeech
@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         Triple("Penguin",   "పెంగ్విన్",     R.drawable.emoji_animals_penguin),
         Triple("Fox",       "నక్క",          R.drawable.emoji_animals_fox),
         Triple("Rabbit",    "కుందేలు",       R.drawable.emoji_animals_bunty),
-        Triple("Bear",      "భల్లూకం",       R.drawable.emoji_animals_bear),
+        Triple("Bear",      "ఎలుగుబంటి",     R.drawable.emoji_animals_bear),
         Triple("Butterfly", "సీతాకోకచిలుక", R.drawable.emoji_animals_butterfly),
     )
 
