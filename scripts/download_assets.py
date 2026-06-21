@@ -11,10 +11,8 @@ from io import BytesIO
 BASE = "https://d8j0ntlcm91z4.cloudfront.net/user_3F3Lmw0hYKtRtyDDE2xxXfBnKAb/"
 
 assets = [
-    # Family — v2 (fixed poses, proportions, hair)
-    ("hf_20260621_033708_38cffe03-1d0f-4765-99b4-5a8f58be7ae8.png", "emoji_family_amma"),
-    ("hf_20260621_033709_7ca7a276-97bd-4fa3-a4d2-4da8aae0edba.png", "emoji_family_papa"),
-    ("hf_20260621_033711_be9a93ed-8ac0-43b1-9a41-97872a18feac.png", "emoji_family_thatha"),
+    # Papa — longer hair, headband, bindi added
+    ("hf_20260621_034200_1044fa6a-c90a-451d-a2a1-6f2e3029a20b.png", "emoji_family_papa"),
 ]
 
 for filename, name in assets:
