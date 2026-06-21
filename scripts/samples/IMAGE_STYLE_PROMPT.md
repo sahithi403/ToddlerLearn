@@ -29,13 +29,13 @@ Images in `scripts/samples/realLifeSamples/` are **reference-only**. They must n
 ## Proportion Rules (ALL characters — human and animal)
 
 ### Head-to-Body Ratio
-Target: **1.25:1** — head is 25% larger than anatomically realistic. Applies to humans AND animals.
+Target: **1.15:1** — head is 15% larger than anatomically realistic. Applies to humans AND animals.
 
-- Too small (stiff): below `1.1:1`
-- ✅ Target: `1.25:1`
-- Too large (chibi): above `1.4:1`
+- Too small (stiff): below `1.05:1`
+- ✅ Target: `1.15:1`
+- Too large (chibi): above `1.3:1`
 
-**Always include:** `"head-to-body ratio 1.25:1, head slightly larger than realistic, not chibi, not oversized"`
+**Always include:** `"head-to-body ratio 1.15:1, head slightly larger than realistic, not chibi, not oversized"`
 
 ### Eye-to-Head Ratio (human characters)
 Base: **1:4** for adults. Scale naturally with age. Never exceed 1:3.
@@ -64,22 +64,16 @@ Base: **1:4** for adults. Scale naturally with age. Never exceed 1:3.
 
 ---
 
-## Image Generation Steps
+## Image Generation Prompt Requirements
 
-### Step 1 — Generate with Higgsfield
+Always include in every character generation prompt:
+- `"MathruStyle 2D cel-shaded children's illustration"`
+- `"isolated character on transparent background, single character centered"`
+- Head-to-body ratio phrase (see Proportion Rules above)
+- Eye size phrase appropriate for character's age (see table above)
 - Model: `nano_banana_pro`
-- Always include in prompt:
-  - `"MathruStyle 2D cel-shaded children's illustration"`
-  - `"isolated character on transparent background, single character centered"`
-  - Head-to-body ratio phrase (see above)
-  - Eye size phrase appropriate for character's age (see above)
-- Generate 1 image per character
 
-### Step 2 — Remove background via Higgsfield
-- Use Higgsfield `remove_background` tool on the completed job
-- Collect resulting CDN URL
-
-> For download, drawable save, and FlashCardsActivity update steps — see `scripts/WORKFLOW.md`
+> For the full generation, assessment, background removal, and save workflow — see `scripts/WORKFLOW.md`
 
 ---
 
