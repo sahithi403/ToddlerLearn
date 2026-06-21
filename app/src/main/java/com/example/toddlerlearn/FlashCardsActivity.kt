@@ -26,19 +26,11 @@ class FlashCardsActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     // ── Data ─────────────────────────────────────────────────────────────────
 
-    private val people = listOf(
-        Triple("Baby",        "పిల్లవాడు", R.drawable.emoji_people_baby),
-        Triple("Girl",        "అమ్మాయి",   R.drawable.emoji_people_girl),
-        Triple("Boy",         "అబ్బాయి",   R.drawable.emoji_people_boy),
-        Triple("Mother",      "అమ్మ",      R.drawable.emoji_people_mother),
-        Triple("Father",      "నాన్న",     R.drawable.emoji_people_father),
-        Triple("Grandmother", "నాయనమ్మ",  R.drawable.emoji_people_grandmother),
-        Triple("Grandfather", "తాతయ్య",   R.drawable.emoji_people_grandfather),
-        Triple("Doctor",      "డాక్టర్",  R.drawable.emoji_people_doctor),
-        Triple("Teacher",     "టీచర్",    R.drawable.emoji_people_teacher),
-        Triple("Cook",        "వంటవాడు",  R.drawable.emoji_people_cook),
-        Triple("Police",      "పోలీసు",   R.drawable.emoji_people_police),
-        Triple("Farmer",      "రైతు",     R.drawable.emoji_people_farmer),
+    private val family = listOf(
+        Triple("Amma",   "అమ్మ",  R.drawable.emoji_family_amma),
+        Triple("Nanna",  "నాన్న", R.drawable.emoji_family_nanna),
+        Triple("Papa",   "పాప",   R.drawable.emoji_family_papa),
+        Triple("Thatha", "తాత",   R.drawable.emoji_family_thatha),
     )
 
     private val objects = listOf(
@@ -110,10 +102,10 @@ class FlashCardsActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
         tts = TextToSpeech(this, this)
 
-        // Default to People
-        loadCategory(people)
+        // Default to Family
+        loadCategory(family)
 
-        binding.btnPeople.setOnClickListener  { loadCategory(people)   }
+        binding.btnPeople.setOnClickListener  { loadCategory(family)   }
         binding.btnObjects.setOnClickListener { loadCategory(objects)  }
         binding.btnAnimals.setOnClickListener { loadCategory(animals)  }
         binding.btnColors.setOnClickListener  { loadCategory(colors)   }
