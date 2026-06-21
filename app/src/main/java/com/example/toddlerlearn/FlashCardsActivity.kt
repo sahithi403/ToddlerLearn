@@ -27,10 +27,14 @@ class FlashCardsActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     // ── Data ─────────────────────────────────────────────────────────────────
 
     private val family = listOf(
-        Triple("Amma",   "అమ్మ",  R.drawable.emoji_family_amma),
-        Triple("Nanna",  "నాన్న", R.drawable.emoji_family_nanna),
-        Triple("Papa",   "పాప",   R.drawable.emoji_family_papa),
-        Triple("Thatha", "తాత",   R.drawable.emoji_family_thatha),
+        Triple("Amma",     "అమ్మ",     R.drawable.emoji_family_amma),
+        Triple("Nanna",    "నాన్న",   R.drawable.emoji_family_nanna),
+        Triple("Papa",     "పాప",      R.drawable.emoji_family_papa),
+        Triple("Babu",     "బాబు",     R.drawable.emoji_family_babu),
+        Triple("Thatha",   "తాత",      R.drawable.emoji_family_thatha),
+        Triple("Ammamma",  "అమ్మమ్మ", R.drawable.emoji_family_ammamma),
+        Triple("Nannamma", "నాన్నమ్మ", R.drawable.emoji_family_nannamma),
+        Triple("Pinni",    "పిన్ని",   R.drawable.emoji_family_pinni),
     )
 
     private val objects = listOf(

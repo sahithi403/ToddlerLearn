@@ -11,8 +11,12 @@ from io import BytesIO
 BASE = "https://d8j0ntlcm91z4.cloudfront.net/user_3F3Lmw0hYKtRtyDDE2xxXfBnKAb/"
 
 assets = [
-    # Papa — longer hair, headband, bindi added
-    ("hf_20260621_034200_1044fa6a-c90a-451d-a2a1-6f2e3029a20b.png", "emoji_family_papa"),
+    # Ammamma — silver-grey saree, glasses, grey-streaked hair
+    ("hf_20260621_040107_efbb8979-a0bb-481b-a28d-dfbffaa6be92.png", "emoji_family_ammamma"),
+    # Nannamma — orange saree, pink border, red bindi, mangalsutra
+    ("hf_20260621_040108_7efd21df-408f-46f1-9b68-b98ab618a1c4.png", "emoji_family_nannamma"),
+    # Pinni — light pink salwar, long wavy hair
+    ("hf_20260621_040110_f80a2ad0-0e8f-40d0-83a1-31a2287b55c5.png", "emoji_family_pinni"),
 ]
 
 for filename, name in assets:
