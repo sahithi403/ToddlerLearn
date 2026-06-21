@@ -118,3 +118,104 @@ When the user says "generate a character with MathruStyle" (or similar):
    "
    ```
 4. Update FlashCardsActivity.kt to reference the new drawable
+
+## Flash Card Image Update Workflow (ALWAYS FOLLOW THIS)
+
+Whenever the user asks to add or update a flash card image (e.g. "add X to flash cards", "replace Y with Z", "generate image for X"), follow these steps automatically without asking:
+
+### Step 1 — Generate with Higgsfield
+- Use `nano_banana_pro` model
+- Always include in prompt: `"isolated character on plain white background, no background elements, single character centered"`
+- Also try `"transparent background"` in the prompt (Higgsfield doesn't reliably support alpha, but include it as a hint)
+- Generate 2 options (`count: 2`)
+- Show both to user and ask them to pick one
+
+### Step 2 — Check for transparency
+After user picks, check if the image already has a transparent background:
+```python
+from PIL import Image
+img = Image.open('scripts/samples/<name>.png').convert('RGBA')
+has_transparency = any(px[3] < 255 for px in img.getdata())
+print('Has transparency:', has_transparency)
+```
+
+### Step 3 — Remove background if needed
+If no transparency (which is almost always the case with Higgsfield), give user this script to run on their Mac:
+```bash
+cd /Users/sahi3c/Claude/Projects/ToddlerLearn
+python3 -c "
+from rembg import remove
+from PIL import Image
+img = Image.open('scripts/samples/<name>.png')
+result = remove(img)
+bbox = result.getbbox()
+result.crop(bbox).save('app/src/main/res/drawable/emoji_animals_<name>.webp', 'WEBP', lossless=True)
+print('Done!')
+"
+```
+
+### Step 4 — Update FlashCardsActivity.kt
+Add the new Triple to the correct category list:
+`Triple("EnglishName", "తెలుగు పేరు", R.drawable.emoji_animals_<name>)`
+
+### Notes
+- The sandbox cannot run rembg (no internet for model download) — always give user the Mac terminal script
+- Always crop to tight bounding box after rembg (`getbbox()`) to remove transparent padding
+- Save as lossless WebP to `app/src/main/res/drawable/`
+
+## Official Flash Card Image Workflow (BATCH)
+
+Whenever the user asks to add one or more new flash card images, follow this exact workflow:
+
+### Step 1 — Generate all images in parallel
+For each requested character:
+- Use Higgsfield `generate_image` with `nano_banana_pro` model
+- Prompt must include: `"isolated character on plain white background, single character centered, no background elements, MathruStyle 2D cel-shaded children's illustration"`
+- Generate 1 image per character (no need for user to pick)
+- Collect all job IDs
+
+### Step 2 — Remove backgrounds via Higgsfield
+For each completed image:
+- Use Higgsfield `remove_background` tool to remove background
+- Collect all resulting CDN URLs
+
+### Step 3 — Write download script
+Write `scripts/download_assets.py` with all URLs and target filenames:
+```python
+import requests
+from PIL import Image
+from io import BytesIO
+
+assets = [
+    ("https://cdn-url-1...", "emoji_animals_tiger"),
+    ("https://cdn-url-2...", "emoji_animals_parrot"),
+    # etc.
+]
+
+for url, name in assets:
+    print(f"Downloading {name}...")
+    r = requests.get(url)
+    img = Image.open(BytesIO(r.content)).convert("RGBA")
+    bbox = img.getbbox()
+    cropped = img.crop(bbox)
+    out = f"app/src/main/res/drawable/{name}.webp"
+    cropped.save(out, "WEBP", lossless=True)
+    print(f"  Saved to {out} ({cropped.size[0]}x{cropped.size[1]}px)")
+
+print("All done!")
+```
+
+### Step 4 — Tell user to run one command
+```bash
+cd /Users/sahi3c/Claude/Projects/ToddlerLearn
+python3 scripts/download_assets.py
+```
+
+### Step 5 — Update FlashCardsActivity.kt
+After user confirms script ran successfully, add all new Triples to the correct category list.
+
+### Notes
+- CDN URLs expire within hours — user must run the script immediately
+- The sandbox cannot download binary files from external CDNs, hence the Mac script
+- Always crop to tight bounding box after background removal
+- Save as lossless WebP
