@@ -38,37 +38,84 @@ class FlashCardsActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         Triple("Aunt",     "పిన్ని",   R.drawable.emoji_family_pinni),
         Triple("Uncle",    "బాబాయి",   R.drawable.emoji_family_babai),
         Triple("Aunt",     "పెద్దమ్మ", R.drawable.emoji_family_peddamma),
+        // Triple("Pedda Nanna", "పెద్దనాన్న", R.drawable.emoji_family_peddananna), // TODO: add image
     )
 
     private val objects = listOf(
-        Triple("House",   "ఇల్లు",     R.drawable.emoji_objects_house),
-        Triple("Car",     "కారు",      R.drawable.emoji_objects_car),
-        Triple("Book",    "పుస్తకం",   R.drawable.emoji_objects_book),
-        Triple("Pencil",  "పెన్సిల్", R.drawable.emoji_objects_pencil),
-        Triple("Bag",     "బ్యాగు",   R.drawable.emoji_objects_bag),
+        // Triple("Milk",   "పాలు",    R.drawable.emoji_objects_milk),   // TODO: add image
+        // Triple("Water",  "నీళ్ళు",  R.drawable.emoji_objects_water),  // TODO: add image
+        // Triple("Rice",   "అన్నం",   R.drawable.emoji_objects_rice),   // TODO: add image
         Triple("Ball",    "బంతి",      R.drawable.emoji_objects_ball),
-        Triple("Apple",   "ఆపిల్",    R.drawable.emoji_objects_apple),
+        // Triple("Toy",    "బొమ్మ",   R.drawable.emoji_objects_toy),    // TODO: add image
+        // Triple("Bed",    "మంచం",    R.drawable.emoji_objects_bed),    // TODO: add image
+        // Triple("Spoon",  "చెంచా",   R.drawable.emoji_objects_spoon),  // TODO: add image
+        // Triple("Shoe",   "చెప్పు",  R.drawable.emoji_objects_shoe),   // TODO: add image
+        // Triple("Tree",   "చెట్టు",  R.drawable.emoji_objects_tree),   // TODO: add image
         Triple("Flower",  "పువ్వు",   R.drawable.emoji_objects_flower),
+        Triple("House",   "ఇల్లు",    R.drawable.emoji_objects_house),
+        // Triple("Cloud",  "మేఘం",    R.drawable.emoji_objects_cloud),  // TODO: add image
+        Triple("Rain",    "వర్షం",    R.drawable.emoji_objects_rain),
         Triple("Sun",     "సూర్యుడు", R.drawable.emoji_objects_sun),
         Triple("Moon",    "చంద్రుడు", R.drawable.emoji_objects_moon),
         Triple("Star",    "నక్షత్రం", R.drawable.emoji_objects_star),
-        Triple("Rain",    "వర్షం",    R.drawable.emoji_objects_rain),
+        Triple("Book",    "పుస్తకం",  R.drawable.emoji_objects_book),
     )
 
     private val animals = listOf(
-        Triple("Dog",       "కుక్క",         R.drawable.emoji_animals_dog),
-        Triple("Cat",       "పిల్లి",        R.drawable.emoji_animals_cat),
         Triple("Cow",       "ఆవు",           R.drawable.emoji_animals_cow),
+        // Triple("Buffalo", "గేదె",          R.drawable.emoji_animals_buffalo),   // TODO: add image
+        // Triple("Bull",    "ఎద్దు",         R.drawable.emoji_animals_bull),      // TODO: add image
+        // Triple("Goat",    "మేక",           R.drawable.emoji_animals_goat),      // TODO: add image
+        // Triple("Sheep",   "గొర్రె",        R.drawable.emoji_animals_sheep),     // TODO: add image
+        Triple("Cat",       "పిల్లి",        R.drawable.emoji_animals_cat),
+        Triple("Dog",       "కుక్క",         R.drawable.emoji_animals_dog),
+        Triple("Fox",       "నక్క",          R.drawable.emoji_animals_fox),
+        // Triple("Horse",   "గుర్రం",        R.drawable.emoji_animals_horse),     // TODO: add image
+        // Triple("Monkey",  "కోతి",          R.drawable.emoji_animals_monkey),    // TODO: add image
+        // Triple("Deer",    "జింక",          R.drawable.emoji_animals_deer),      // TODO: add image
+        // Triple("Fish",    "చేప",           R.drawable.emoji_animals_fish),      // TODO: add image
+        // Triple("Snake",   "పాము",          R.drawable.emoji_animals_snake),     // TODO: add image
         Triple("Pig",       "పంది",          R.drawable.emoji_animals_pig),
         Triple("Frog",      "కప్ప",          R.drawable.emoji_animals_frog),
+        Triple("Tiger",     "పులి",          R.drawable.emoji_animals_tiger),
         Triple("Lion",      "సింహం",         R.drawable.emoji_animals_lion),
         Triple("Elephant",  "ఏనుగు",         R.drawable.emoji_animals_elephant),
-        Triple("Tiger",     "పులి",           R.drawable.emoji_animals_tiger),
-        Triple("Fox",       "నక్క",          R.drawable.emoji_animals_fox),
-        Triple("Rabbit",    "కుందేలు",       R.drawable.emoji_animals_bunty),
+        Triple("Rabbit",    "కుందేలు",       R.drawable.emoji_animals_rabbit),
         Triple("Bear",      "ఎలుగుబంటి",     R.drawable.emoji_animals_bear),
         Triple("Butterfly", "సీతాకోకచిలుక", R.drawable.emoji_animals_butterfly),
     )
+
+    //private val birds = listOf(
+        // Triple("Crow",    "కాకి",   R.drawable.emoji_birds_crow),    // TODO: add image
+        // Triple("Hen",     "కోడి",   R.drawable.emoji_birds_hen),     // TODO: add image
+        // Triple("Duck",    "బాతు",   R.drawable.emoji_birds_duck),    // TODO: add image
+        // Triple("Sparrow", "పిట్ట",  R.drawable.emoji_birds_sparrow), // TODO: add image
+        // Triple("Eagle",   "గద్ద",   R.drawable.emoji_birds_eagle),   // TODO: add image
+        // Triple("Swan",    "హంస",    R.drawable.emoji_birds_swan),    // TODO: add image
+        // Triple("Crane",   "కొంగ",   R.drawable.emoji_birds_crane),   // TODO: add image
+        // Triple("Parrot",  "చిలుక",  R.drawable.emoji_birds_parrot),  // TODO: add image
+        // Triple("Peacock", "నెమలి",  R.drawable.emoji_birds_peacock), // TODO: add image
+        // Triple("Cuckoo",  "కోయిల",  R.drawable.emoji_birds_cuckoo),  // TODO: add image
+        // Triple("Pigeon",  "పావురం", R.drawable.emoji_birds_pigeon),  // TODO: add image
+        // Triple("Owl",     "గుడ్లగూబ", R.drawable.emoji_birds_owl),   // TODO: add image
+    //)
+
+    //private val fruits = listOf(
+        // Triple("Banana",       "అరటిపండు",    R.drawable.emoji_fruits_banana),      // TODO: add image
+        // Triple("Watermelon",   "పుచ్చకాయ",    R.drawable.emoji_fruits_watermelon),  // TODO: add image
+        // Triple("Mango",        "మామిడిపండు",  R.drawable.emoji_fruits_mango),       // TODO: add image
+        // Triple("Grapes",       "ద్రాక్షపండ్లు", R.drawable.emoji_fruits_grapes),   // TODO: add image
+        // Triple("Orange",       "నారింజపండు",  R.drawable.emoji_fruits_orange),      // TODO: add image
+        // Triple("Guava",        "జామపండు",     R.drawable.emoji_fruits_guava),       // TODO: add image
+        // Triple("Lemon",        "నిమ్మకాయ",    R.drawable.emoji_fruits_lemon),       // TODO: add image
+        // Triple("Fig",          "మేడిపండు",    R.drawable.emoji_fruits_fig),         // TODO: add image
+        // Triple("Jujube",       "రేగుపండు",    R.drawable.emoji_fruits_jujube),      // TODO: add image
+        // Triple("Papaya",       "బొప్పాయిపండు", R.drawable.emoji_fruits_papaya),    // TODO: add image
+        // Triple("Pomegranate",  "దానిమ్మపండు", R.drawable.emoji_fruits_pomegranate), // TODO: add image
+        // Triple("Coconut",      "కొబ్బరికాయ",  R.drawable.emoji_fruits_coconut),     // TODO: add image
+        // Triple("Jackfruit",    "పనసపండు",     R.drawable.emoji_fruits_jackfruit),   // TODO: add image
+        // Triple("Sapota",       "సపోటపండు",    R.drawable.emoji_fruits_sapota),      // TODO: add image
+    //)
 
     private val colors = listOf(
         Triple("Red",        "ఎరుపు",       R.drawable.emoji_colors_red),
